@@ -21,12 +21,12 @@ public class Oauth2WebClientApplication {
                 .route(rs -> rs
                         .path("/hello")
                         .filters(GatewayFilterSpec::tokenRelay)
-                        .uri("http://localhost:8081/hello")
+                        .uri("http://localhost:8081")
                 )
                 .route(rs -> rs
                         .path("/hello2")
                         .filters(GatewayFilterSpec::tokenRelay)
-                        .uri("http://localhost:8081/hello2")
+                        .uri("http://localhost:8081")
                 )
                 .build();
     }
